@@ -13,7 +13,6 @@ def detect_text(image):
     details = pytesseract.image_to_data(image, output_type=pytesseract.Output.DICT, config=custom_config)
     return details
 
-# Function to run the EAST text detector
 def east_text_detector(image):
     orig = image.copy()
     (H, W) = image.shape[:2]
@@ -40,7 +39,7 @@ def east_text_detector(image):
     net.setInput(blob)
     (scores, geometry) = net.forward(layerNames)
 
-    # Decode the predictions, then  apply non-maxima suppression to suppress weak, overlapping bounding boxes
+    # Decode the predictions, then apply non-maxima suppression to suppress weak, overlapping bounding boxes
     (rects, confidences) = decode_predictions(scores, geometry)
     boxes = non_max_suppression(np.array(rects), probs=confidences)
 
@@ -143,6 +142,7 @@ def main():
     # Iterate through the detected text regions
     for (startX, startY, endX, endY) in results:
         # Extract the region of interest
+        print(results)
         roi = orig[startY:endY, startX:endX]
 
         # Preprocess the ROI
