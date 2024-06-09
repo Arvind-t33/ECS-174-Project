@@ -6,3 +6,6 @@ https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign/d
 
 Dashcam photos can be found at:
 https://www.kaggle.com/datasets/pkdarabi/cardetection
+
+Street Sign photos can be found at:
+https://www.kaggle.com/datasets/dmitryyemelyanov/chinese-traffic-sign-panels
