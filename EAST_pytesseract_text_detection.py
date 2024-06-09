@@ -135,7 +135,7 @@ def non_max_suppression(boxes, probs=None, overlapThresh=0.3):
 
 def main():
     # Read the image
-    image = cv2.imread('chinese_signs/images/Train_CD_026.jpg')
+    image = cv2.imread('chinese_signs/images/Train_SH_025.jpg')
 
     # Detect text using EAST text detector
     orig, results = east_text_detector(image)
